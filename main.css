@@ -7,28 +7,10 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    text-align:center;
-    justify-content: space-between;
-    position: relative;
 
-}
-ul{
-    display: inline-flex;
-    list-style: none;
-    padding:15px;
-    margin: 0%;
-}
-li{
-    text-align: center;
-    display: flex;
-    padding: 14px;
-    text-decoration: none;  
-}
 body{
     background-color: beige;
+    z-index: 0;
 }
 .banner{
     width: 100%;
@@ -70,3 +52,44 @@ body{
    justify-content: center;
    align-items: center;
 }
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color:beige;
+    display: flex;
+    align-items: center;   
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color:black;
+    text-align: center;
+    justify-content: end;
+    width: 100%;
+    text-decoration: none;
+    padding: 15px;
+  }
+  .logo{
+    margin-right: 40px ;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  nav{
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    }

@@ -10,15 +10,16 @@
     </head>
     <body>
          <nav>
-        <p> LOGO</p>
-        <ul>
-        <li>HOME</li>
-        <li>ABOUT US</li>
-        <li>SERVICES</li>
-        <li>BLOG</li>
-        <LI>CONTACT US</LI>
-        </ul>
-       </nav>
+    
+        <div id="navbar">
+            <p class="logo"> LOGO</p>
+            <a href="#HOME">HOME</a>
+            <a href="#ABOUT US">ABOUT US</a>
+            <a href="#SERVICES">SERVICES</a>
+            <a href="#BLOG">BLOG</a>
+            <a href="#CONTACT US">CONTACT US</a>
+          </div>
+          </nav>
        <div class="banner">
         <div class="banner-overlay">
         <h4>Professional Cleaning Services</h4>
@@ -28,8 +29,24 @@
          
         </div>
     
-        <script>
-        
-        </script>
+    <script>
+        // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
     </body>
 </html>
